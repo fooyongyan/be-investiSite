@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_notes",
+  "info": {
+    "name": "note",
+    "icon": "sticky-note"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

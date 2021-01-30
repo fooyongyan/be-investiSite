@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commitments",
+  "info": {
+    "name": "Commitment", 
+    "description": "A Commitment which I would need to pay monthly, due to different purposes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Open",
+        "Closed"
+      ]
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "Cash",
+        "CPF"
+      ]
+    },
+    "comments": {
+      "type": "richtext"
+    },
+    "purpose": {
+      "type": "enumeration",
+      "enum": [
+        "Housing",
+        "Revenue",
+        "Investment",
+        "Insurance"
+      ]
+    }
+  }
+}

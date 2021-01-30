@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platforms",
+  "info": {
+    "name": "Platform",
+    "description": "Representing a platform you are using the System"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "investments": {
+      "via": "platform",
+      "collection": "investment"
+    },
+    "website": {
+      "type": "string"
+    },
+    "nature": {
+      "type": "enumeration",
+      "enum": [
+        "Stocks",
+        "Crypto",
+        "Insurance"
+      ]
+    },
+    "commitment": {
+      "type": "enumeration",
+      "enum": [
+        "LongTerm",
+        "ShortTerm"
+      ]
+    },
+    "contractualEnd": {
+      "type": "date",
+      "private": false
+    },
+    "risk": {
+      "type": "enumeration",
+      "enum": [
+        "VeryHigh",
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "revenueType": {
+      "type": "enumeration",
+      "enum": [
+        "Passive",
+        "Growth",
+        "Hybrid"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "InvestmentActivity",
+    "description": "An investment activity, where money is injected or withdrawn into/from a Platform"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "platform": {
+      "model": "platform",
+      "via": "investments"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Currency": {
+      "type": "enumeration",
+      "enum": [
+        "USD",
+        "SGD"
+      ]
+    },
+    "activityType": {
+      "type": "enumeration",
+      "enum": [
+        "Injection",
+        "Withdrawal"
+      ]
+    }
+  }
+}
